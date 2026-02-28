@@ -15,8 +15,9 @@ spec:
       name: frontend-pod
       labels:
         app: frontend
-    containers:
-    - name: arel-frontend
-      image: aalmacin/arel-frontend:latest
-      ports:
-      - containerPort: 3000
+    spec:
+      containers:
+      - name: arel-frontend
+        image: aalmacin/arel-frontend:latest
+        ports:
+        - containerPort: 3000
