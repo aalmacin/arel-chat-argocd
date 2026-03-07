@@ -5,16 +5,16 @@ type: application
 version: 0.1.0
 appVersion: "1.16.0"
 dependencies:
-  - name: istio/base
+  - name: base
     version: 1.29.0
     repository: https://istio-release.storage.googleapis.com/charts
-  - name: istio/ingress
+  - name: ingress
     version: 1.29.0
     repository: https://istio-release.storage.googleapis.com/charts
-  - name: istio/gateway
+  - name: gateway
     version: 1.29.0
     repository: https://istio-release.storage.googleapis.com/charts
-  - name: istio/istiod
+  - name: istiod
     version: 1.29.0
     repository: https://istio-release.storage.googleapis.com/charts
 namespaced: true
