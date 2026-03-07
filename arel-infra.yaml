@@ -1,0 +1,23 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: arel-infra
+spec:
+  destination:
+    namespace: arel
+    server: https://kubernetes.default.svc
+  source:
+    path: templates
+    repoURL: https://github.com/aalmacin/arel-chat-argocd.git
+    targetRevision: HEAD
+    directory:
+      recurse: true
+  sources: []
+  project: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
+      enabled: true
+    syncOptions:
+      - CreateNamespace=true
